@@ -8,10 +8,12 @@ const Dropdown = () => {
   const { filter, setFilter } = useTransactionFilter();
   const { status } = filter;
 
-  const handleChange = (status_: string) => {
+  const handleChange = (status_: string | undefined) => {
     setIsStatusList(false);
-    setFilter({ status: status_ as Transaction["status"] });
+    setFilter({ status: status_ as Transaction["status"] & undefined});
   };
+
+  const correctedStatus = (status) ? String(status).charAt(0).toUpperCase() + String(status).slice(1) : 'All';
   return (
     <div className="dropdown w-100 position-relative">
       <button
@@ -19,7 +21,7 @@ const Dropdown = () => {
         type="button"
         onClick={() => setIsStatusList((prev) => !prev)}
       >
-        <span>{String(status).charAt(0).toUpperCase() + String(status).slice(1) || "Select status"}</span>
+        <span>{correctedStatus}</span>
         <span
           className={`ms-2 transition ${isStatusList ? "rotate-180" : ""}`}
           style={{ transition: "transform 0.2s" }}
@@ -45,6 +47,13 @@ const Dropdown = () => {
             onClick={() => handleChange('failed')}
           >
             Failed
+          </button>
+
+          <button
+            className="dropdown-item"
+            onClick={() => handleChange(undefined)}
+          >
+            All
           </button>
         </div>
       )}

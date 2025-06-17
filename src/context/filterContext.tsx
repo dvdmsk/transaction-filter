@@ -12,7 +12,7 @@ export type SortOrder = "asc" | "desc";
 export interface TransactionFilter {
   amountFrom?: number;
   amountTo?: number;
-  status?: Transaction["status"];
+  status?: Transaction["status"] & undefined;
   dateSortOrder?: SortOrder;
   amountSortOrder?: SortOrder;
 }
