@@ -1,0 +1,15 @@
+@import './vars';
+@import './mixins';
+@import './fonts';
+
+.container {
+  padding-block: 10px;
+
+  @include on-tablet {
+    padding-block: 20px;
+  }
+
+  @include on-desktop {
+    padding-block: 40px;
+  }
+}

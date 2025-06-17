@@ -1,3 +1,6 @@
+/* @import './styles/utils/_global.scss'; */
+/* @import '/src/styles/utils/global'; */
+
 .App {
   text-align: center;
 }
@@ -36,3 +39,9 @@
     transform: rotate(360deg);
   }
 }
+
+p, h1, h2, h3, ul {
+  margin: 0;
+  padding: 0;
+}
+

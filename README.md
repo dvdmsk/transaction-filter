@@ -1,46 +1,68 @@
-# Getting Started with Create React App
+# ✅ Transaction Filter & Sort React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A React application that displays and filters a list of transactions with sorting based on URL parameters. Sorting supports amount and date, with prioritization logic. Filters and sorting options are synced with URL search parameters for deep linking and state persistence.
 
-## Available Scripts
+## 🌐 Live Demo
 
-In the project directory, you can run:
+- 🔗 [Live Demo](https://dvdmsk.github.io/transaction-filter/)
+- 📎 Fully integrated filtering and sorting with URL synchronization
 
-### `npm start`
+## 📦 Repository
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- 📁 [GitHub Repo](https://github.com/dvdmsk/transaction-filter.git)
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## 🛠️ Technologies Used
 
-### `npm test`
+- **React (Function Components + Hooks)** — for UI and state management
+- **TypeScript** — type safety and autocompletion
+- **React Router (useSearchParams)** — URL query parameters handling
+- **React Bootstrap** — UI components and styling
+- **Context API** — global filter state management
+- **Date parsing with native JS Date** — sorting by ISO 8601 date strings
+- **ESLint & Prettier** — code quality and formatting
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## ✨ Features
 
-### `npm run build`
+- 🎯 **Filtering by amount range and status** — controlled via URL parameters
+- 📅 **Sorting by amount and date** — with priority logic and persistence
+- 🔄 **URL-synced state** — filters and sorting are stored in query parameters for shareable links and browser history support
+- ⚡ **Dynamic updates** — sorting and filtering apply immediately when URL changes
+- 🧩 **Separation of concerns** — components for controls, table, and context provider
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## 🚀 Getting Started
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+To run the project locally:
 
-### `npm run eject`
+1. **Clone the repository**
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+    ```bash
+    git clone https://github.com/dvdmsk/transaction-filter-sort.git
+    cd transaction-filter-sort
+    ```
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+2. **Install dependencies**
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+    ```bash
+    npm install
+    ```
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+3. **Run the app**
 
-## Learn More
+    ```bash
+    npm start
+    ```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+4. **Open in browser**
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+    Navigate to `http://localhost:3000`
+
+## ✅ UX & Functional Considerations
+
+- Sorting respects priority: if `sortAmount` changes, sorting applies by amount ignoring date sorting; if not, then date sorting applies
+- Filters and sorting parameters are validated before applying
+- Default sorting and filtering applies when parameters are absent
+- State sync with URL enables deep linking and bookmarking filtered/sorted views
+- Sorting functions correctly handle ISO date strings (`YYYY-MM-DDTHH:mm:ssZ`) with native JS Date parsing
+- Clear user feedback via controls component on current filters and sorting
+- Modular code structure for easy maintenance and scalability

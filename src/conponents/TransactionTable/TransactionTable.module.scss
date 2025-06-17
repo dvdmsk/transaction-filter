@@ -1,0 +1,73 @@
+.Transaction {
+  font-size: 1rem;
+
+  @media (max-width: 768px) {
+    font-size: 0.875rem;
+
+    th, td {
+      white-space: nowrap;
+      padding: 0.5rem;
+    }
+  }
+
+  &__head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.25rem;
+
+    @media (max-width: 768px) {
+      font-size: 0.875rem;
+    }
+  }
+
+  &__sort {
+    display: flex;
+    flex-direction: column;
+    gap: 0.1rem;
+
+    svg {
+      width: 0.75rem;
+      height: 0.75rem;
+      color: #6c757d;
+
+      &.Transaction__sort_open {
+        color: #0d6efd;
+      }
+    }
+  }
+
+  &__sort_open {
+    color: #0d6efd;
+  }
+
+}
+
+.TransactionMobile {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  gap: 1rem;
+  padding: 0.5rem;
+
+  &__card {
+    border: 1px solid #dee2e6;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    div {
+      margin-bottom: 0.25rem;
+      font-size: 0.875rem;
+
+      strong {
+        display: inline-block;
+        width: 80px;
+        text-align: left;
+      }
+    }
+  }
+}
+
