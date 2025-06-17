@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/transaction-filter/static/css/main.3f60652d.css",
-    "main.js": "/transaction-filter/static/js/main.1bb6dda4.js",
+    "main.js": "/transaction-filter/static/js/main.bbfefa2d.js",
     "index.html": "/transaction-filter/index.html",
     "main.3f60652d.css.map": "/transaction-filter/static/css/main.3f60652d.css.map",
-    "main.1bb6dda4.js.map": "/transaction-filter/static/js/main.1bb6dda4.js.map"
+    "main.bbfefa2d.js.map": "/transaction-filter/static/js/main.bbfefa2d.js.map"
   },
   "entrypoints": [
     "static/css/main.3f60652d.css",
-    "static/js/main.1bb6dda4.js"
+    "static/js/main.bbfefa2d.js"
   ]
 }
